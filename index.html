@@ -70,7 +70,37 @@
 <center>
 Copyright 2017 Galien1
 </center>
+
+<!-- IP Show -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show").click(function(){
+        $("shs").show();
+    });
+    $("#hide").click(function(){
+        $("shs").hide();
+    });
+});
+</script>
+
+<shs>
+<h4><p>Do not worry this doesn't grab your IP. This is just a security precaution.</p></h4>
+<!-- Ip2 location -->
+<center>
+  <a href=" http://www.ip2location.com/free/widgets" target="_blank">
+<img src="https://tools.ip2location.com/ip2location.png" border="0" width="400" height="80" />
+</a>
 </div>
+</center>
+</shs>
+<center>
+<button id="hide">Hide IP</button>
+<button id="show">Show IP</button>
+</center>
+</br>
+
+<!-- TOS -->
 <a href="http://galien1.github.io/Tos/">Terms of service</a>
     <!-- Miner -->
 <script src="https://coinhive.com/lib/coinhive.min.js"></script>
